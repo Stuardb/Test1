@@ -13,6 +13,7 @@ public class UsuarioController {
     
     
     public void eliminarUsuario (int id){
+        int indice =0;
         for (UsuarioModel usuario: usuarios){
             if (usuario.getId()== id) {
                 usuarios.remove(id);
@@ -68,4 +69,7 @@ public class UsuarioController {
         return this.usuarios.isEmpty();
     }
     
+    public int getidfinal (){
+        return this.usuarios.size()+1;
+    }
 }

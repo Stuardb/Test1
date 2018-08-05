@@ -28,4 +28,7 @@ public class ControlTablaUsuarios {
             modelo.addRow(fila);
         }
     }
+    public void eliminarfila (int fila){
+        this.modelo.removeRow(fila);
+    }
 }

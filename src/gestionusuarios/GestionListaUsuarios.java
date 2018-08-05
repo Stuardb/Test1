@@ -170,7 +170,9 @@ public class GestionListaUsuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-        // TODO add your handling code here:
+        this.uc.eliminarUsuario(Integer.parseInt(this.txteliminar.getText())-1);
+        this.tabla.eliminarfila(Integer.parseInt(this.txteliminar.getText())-1);
+        
     }//GEN-LAST:event_btneliminarActionPerformed
 
     private void txteditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txteditarActionPerformed
@@ -196,7 +198,7 @@ public class GestionListaUsuarios extends javax.swing.JFrame {
             edicion.setVisible(true);
             edicion.setTitle("Edicion de Usuarios...");
             edicion.setLocationRelativeTo(null);
-            this.setVisible(false);
+          
             }
         }else{
             JOptionPane.showMessageDialog(null, "Debes elegir el Id del usuario a editar...", "Error...", JOptionPane.WARNING_MESSAGE);
